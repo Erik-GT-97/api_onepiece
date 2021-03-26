@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
+const crewRouter = require('./routes/crews.routes')
 
 dotenv.config()
 
@@ -16,11 +17,14 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
+app.use('/api/crews', crewRouter)
+
 app.use(cors())
 
-app.get('/', ( req, res) => {
+app.get('/api', ( req, res) => {
     res.send('Hello API ONEPIECE')
 })
+
 
 const port = process.env.PORT || 5000 
 
