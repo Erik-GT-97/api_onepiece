@@ -1,12 +1,14 @@
+import Layout from '@components/Layout'
+import '../styles.css'
 
 function MyApp({ Component, pageProps }) {
     //Providers - Context/Providers, Theme, data
     //Layout
     // props adicionales
     return (
-        <div>
+        <Layout>
             <Component {...pageProps} />
-        </div>
+        </Layout>
     ) 
   }
 

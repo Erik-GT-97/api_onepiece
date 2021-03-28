@@ -1,0 +1,13 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.logo a:hover{
+    background: none;
+}
