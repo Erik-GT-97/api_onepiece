@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 const crewSchema = new mongoose.Schema({
     name: {
@@ -31,4 +31,6 @@ const crewSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('crews', crewSchema)
+const crewModel = mongoose.model('crews', crewSchema)
+
+export default crewModel
